@@ -18,13 +18,6 @@ interface Props {
 }
 
 const PlatformIconList = ({ platforms }: Props) => {
-  let lastId = 0;
-
-  function random(prefix = "id") {
-    lastId++;
-    return `${prefix}${lastId}`;
-  }
-
   const iconMap: { [key: string]: IconType } = {
     pc: FaWindows,
     playstation: FaPlaystation,
@@ -38,8 +31,8 @@ const PlatformIconList = ({ platforms }: Props) => {
   };
   return (
     <HStack marginY={1}>
-      {platforms.map((platform) => (
-        <Icon key={random()} as={iconMap[platform.slug]} color="gray.500" />
+      {platforms.map((platform, index) => (
+        <Icon key={index} as={iconMap[platform.slug]} color="gray.500" />
       ))}
     </HStack>
   );
