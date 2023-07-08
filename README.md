@@ -1,3 +1,3 @@
 # game-hub
 
-# Technology: Reactjs, chakra ui   
+Using: vitejs, Typescript, Reactjs,axios , chakra ui   
